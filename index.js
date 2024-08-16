@@ -28,3 +28,15 @@ app.get('/about',(req,res)=>{
     const num=Math.floor(Math.random()*(9999-1000))+1000
 res.render('about',{num})
 })
+
+
+app.get('/ig/:username',(req,res)=>{
+const instaData=require('./data.json')
+const {username}=req.params
+
+
+
+
+res.render('instagram',{data:instaData[username]})
+
+})

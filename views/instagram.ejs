@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram</title>
+</head>
+<body>
+    <h1>This Page Belongs To : <%= data.name %></h1>
+    <h2>Followers: <%= data.followers %>  &nbsp;&nbsp;&nbsp;&nbsp;Following: <%= data.following %> </h2>
+    <h3>posts</h3>
+<% data.posts.forEach(element => {%>
+    
+
+<div style="display: flex; justify-content: center; align-items: center; gap: 50px;">
+    <div style="display: flex; justify-content: center; align-items: center; flex-direction: column; ">
+    <img src="<%= element.image%>" alt="" width="100px">
+    <p>Likes:<%= element.likes%>  &nbsp;&nbsp;&nbsp;&nbsp;Comments:<%= element.comments%></p>
+</div>
+
+
+    <%   }); %>
+</div>
+</body>
+</html>
